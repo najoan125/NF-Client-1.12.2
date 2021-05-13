@@ -1,0 +1,44 @@
+NF Client를 이용해 주셔서 감사합니다. 
+아래 동의해야 하는 내용은 꼭! 읽어주시기 바랍니다.
+
+────────동의해야 하는 내용───────
+1.본 설치기는 파일 변조 방지를 위해 2차 배포가 금지됩니다.
+
+2.본 설치기는 예고없이 삭제되거나 변경될 수 있습니다.
+
+3.본 설치기의 파일 링크는 예고없이 삭제되거나 변경될 수 있습니다.
+
+4.본 설치기 이용시, NF Client 에 수동으로 설치한 모드는 전부 삭제됩니다.
+
+5.본 설치기는 언제든지 업데이트가 될 수 있습니다. 
+  아래 사이트에서 새로운 버전이 나왔는지 확인해주세요.
+  (이 설치기 버전은 Beta 1.2 입니다)
+  설치기 다운로드 주소: https://www.hift.kro.kr/download
+  
+6.이 클라이언트는 모든 컴퓨터에서 안정적으로 작동하지 않으며, 몇몇 컴퓨터에서 에러가 발생할 수 있습니다.
+
+7.이 클라이언트의 최소사양보다 낮은 사양의 컴퓨터로 플레이 시, 모든 책임은 개인에게 있습니다(최소사양은 하이파타 디스코드에서 확인해주세요)
+  하이파타 디스코드 링크: https://discord.gg/tmqUgaY
+────────────────────────
+
+───────패치 노트 및 변경사항───────
+Beta 1.0: NF Client 1.12.2 출시!
+Beta 1.0: 버그 수정
+Beta 1.1: 블럭 오버레이 추가
+Beta 1.2: 인게임에서 음악을 들을 수 있는 Music Player 추가(F8로 이용 가능)
+────────────────────────
+
+─────── 모드 출처 ───────
+Optifine: https://optifine.net/home
+Quickplay: https://bugg.co/quickplay/
+Autotip: https://autotip.pro/
+AutoSprint: https://www.curseforge.com/minecraft/mc-mods/auto-sprint-mod
+discordrpc: https://minecraft.curseforge.com/projects/discordrpc/files
+FancyBockOverlay: https://pcminecraft-mods.com/fancy-block-overlay-mod-minecraft-1-12-2/
+FullscreenWindowed: https://www.curseforge.com/minecraft/mc-mods/fullscreen-windowed-borderless-for-minecraft
+Keystrokes: https://sk1er.club/mods/keystrokesmod
+MouseDelayFix: https://github.com/prplz/MouseDelayFix/releases
+ReAuth: https://www.curseforge.com/minecraft/mc-mods/reauth
+ScreenshotToClipboard: https://github.com/comp500/ScreenshotToClipboard
+Music Player: https://www.curseforge.com/minecraft/mc-mods/music-player
+────────────────────────
