@@ -12,7 +12,7 @@ NF Client를 이용해 주셔서 감사합니다.
 
 5.본 설치기는 언제든지 업데이트가 될 수 있습니다. 
   아래 사이트에서 새로운 버전이 나왔는지 확인해주세요.
-  (이 설치기 버전은 Beta 1.2 입니다)
+  (이 설치기 버전은 Beta 1.3 입니다)
   설치기 다운로드 주소: https://www.hift.kro.kr/download
   
 6.이 클라이언트는 모든 컴퓨터에서 안정적으로 작동하지 않으며, 몇몇 컴퓨터에서 에러가 발생할 수 있습니다.
@@ -26,6 +26,7 @@ Beta 1.0: NF Client 1.12.2 출시!
 Beta 1.0: 버그 수정
 Beta 1.1: 블럭 오버레이 추가
 Beta 1.2: 인게임에서 음악을 들을 수 있는 Music Player 추가(F8로 이용 가능)
+Beta 1.3: Quickplay 업데이트, Better Chat, Comact Chat, Less Lag 추가
 ────────────────────────
 
 ─────── 모드 출처 ───────
@@ -41,4 +42,7 @@ MouseDelayFix: https://github.com/prplz/MouseDelayFix/releases
 ReAuth: https://www.curseforge.com/minecraft/mc-mods/reauth
 ScreenshotToClipboard: https://github.com/comp500/ScreenshotToClipboard
 Music Player: https://www.curseforge.com/minecraft/mc-mods/music-player
+Better Chat: https://www.curseforge.com/minecraft/mc-mods/better-chat
+Compact Chat: https://sk1er.club/mods/compactchat
+Less Lag: https://www.curseforge.com/minecraft/mc-mods/less-lag/files/all?filter-game-version=2020709689%3A6756
 ────────────────────────
