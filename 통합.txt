@@ -35,6 +35,7 @@ Beta 1.6: 자동 점프 비활성화
 Beta 1.7: Reauth 한글화, 맞춤 십자선 추가, 인벤토리 투명화(Blur) 추가
 Beta 1.8: Autotext 추가(/autotext 이용하여 사용 가능, 1.8.9에서 등록한 매크로 사용 가능)
 Beta 1.9: Autotip 버그 수정, ChromaHUD 추가(1.8.9 설정 그대로 사용 가능)
+Beta 2.0: 블럭 오버레이 1.8.9 설정 그대로 사용 가능하게 변경
 ────────────────────────
 
 ─────── 모드 출처 ───────
@@ -43,15 +44,13 @@ Quickplay: https://bugg.co/quickplay/
 Autotip: https://autotip.pro/
 AutoSprint: https://www.curseforge.com/minecraft/mc-mods/auto-sprint-mod
 discordrpc: https://minecraft.curseforge.com/projects/discordrpc/files
-FancyBockOverlay: https://pcminecraft-mods.com/fancy-block-overlay-mod-minecraft-1-12-2/
+BlockOverlay: http://www.9minecraft.net/block-overlay-mod/
 FullscreenWindowed: https://www.curseforge.com/minecraft/mc-mods/fullscreen-windowed-borderless-for-minecraft
-Keystrokes: https://sk1er.club/mods/keystrokesmod
 MouseDelayFix: https://github.com/prplz/MouseDelayFix/releases
 ReAuth: https://www.curseforge.com/minecraft/mc-mods/reauth
 ScreenshotToClipboard: https://github.com/comp500/ScreenshotToClipboard
 Music Player: https://www.curseforge.com/minecraft/mc-mods/music-player
 Better Chat: https://www.curseforge.com/minecraft/mc-mods/better-chat
-Compact Chat: https://sk1er.club/mods/compactchat
 Less Lag: https://www.curseforge.com/minecraft/mc-mods/less-lag/files/all?filter-game-version=2020709689%3A6756
 CustomCrossHair: https://www.curseforge.com/minecraft/mc-mods/custom-crosshair-mod
 Blur: https://www.curseforge.com/minecraft/mc-mods/blur
