@@ -2,7 +2,7 @@
 
 ; HM NIS Edit Wizard helper defines
 !define PRODUCT_NAME "NF Client 1.12.2"
-!define PRODUCT_VERSION "Beta 2.1"
+!define PRODUCT_VERSION "Beta 2.2"
 !define PRODUCT_PUBLISHER "NF Client"
 !define PRODUCT_WEB_SITE "https://www.hift.kro.kr"
 !define PRODUCT_UNINST_KEY "Software\Microsoft\Windows\CurrentVersion\Uninstall\${PRODUCT_NAME}"
@@ -57,42 +57,13 @@ RequestExecutionLevel admin
 InstallDir "$APPDATA\.nfclient"
 ShowInstDetails hide
 
-Function ShellLinkSetRunAs
-System::Store S
-pop $9
-System::Call "ole32::CoCreateInstance(g'${CLSID_ShellLink}',i0,i1,g'${IID_IShellLink}',*i.r1)i.r0"
-${If} $0 = 0
-	System::Call "$1->0(g'${IPersistFile}',*i.r2)i.r0" ;QI
-	${If} $0 = 0
-		System::Call "$2->5(w '$9',i 0)i.r0" ;Load
-		${If} $0 = 0
-			System::Call "$1->0(g'${IShellLinkDataList}',*i.r3)i.r0" ;QI
-			${If} $0 = 0
-				System::Call "$3->6(*i.r4)i.r0" ;GetFlags
-				${If} $0 = 0
-					System::Call "$3->7(i $4|0x2000)i.r0" ;SetFlags ;SLDF_RUNAS_USER
-					${If} $0 = 0
-						System::Call "$2->6(w '$9',i1)i.r0" ;Save
-					${EndIf}
-				${EndIf}
-				System::Call "$3->2()" ;Release
-			${EndIf}
-		System::Call "$2->2()" ;Release
-		${EndIf}
-	${EndIf}
-	System::Call "$1->2()" ;Release
-${EndIf}
-push $0
-System::Store L
-FunctionEnd
-
 Section "MainSection" SEC01
   SetOverwrite on
   AddSize 1000000
   Messagebox MB_OKCANCEL "경고: NF Client에 수동으로 설치한 모드는 삭제됩니다.$\n$\n설치를 취소하시려면 취소를 누르세요" IDCANCEL END
   iffileexists "$APPDATA\.nfclient\mods\1.8.9\slf4j-api-1.7.25.jar" O X
 X:
-  Messagebox MB_OK "NF Client가 설치되지 않았거나, Beta 2.5 미만의 버전이 설치되어있습니다.$\nBeta 2.5 이상의 버전으로 업데이트 후 설치해주세요." IDOK END
+  Messagebox MB_OK "NF Client가 설치되지 않았거나, 2021.1 미만의 버전이 설치되어있습니다.$\nBeta 2021.1 이상의 버전으로 업데이트 후 설치해주세요." IDOK END
 O:
   SetOutPath "$INSTDIR"
   File "launcher_profiles.json"
@@ -143,7 +114,7 @@ O:
   ;mod
   SetOutPath "$INSTDIR\mods\1.12.2"
   Nsisdl::download "https://blog.kakaocdn.net/dn/k74Yy/btqFIOze0RG/ckQOY9gpF5J4iMfcKJotH1/7z.exe?attach=1&knm=tfile.exe" "7z.exe"
-  Nsisdl::download /TRANSLATE2 "모드 설치중 (1/1)" "연결중입니다.." "(1 초 남았습니다...)" "(1 분 남았습니다...)" "(1 시간 남았습니다)" "(%u 초 남았습니다....)" "(%u 분 남았습니다....)" "(%u 시간 남았습니다)" "다운로드 중 " "http://132.226.170.151/file/1122/B2.0.7z" "mods.7z"
+  Nsisdl::download /TRANSLATE2 "모드 설치중 (1/1)" "연결중입니다.." "(1 초 남았습니다...)" "(1 분 남았습니다...)" "(1 시간 남았습니다)" "(%u 초 남았습니다....)" "(%u 분 남았습니다....)" "(%u 시간 남았습니다)" "다운로드 중 " "http://132.226.170.151/file/1122/B2.2.7z" "mods.7z"
   nsexec::exec '$INSTDIR\mods\1.12.2\7z.exe x "$instdir\mods\1.12.2\mods.7z" "-aoa"'
   delete "7z.exe"
   delete "mods.7z"
@@ -159,7 +130,7 @@ O:
   SetOutPath "$INSTDIR\resourcepacks"
   RMDir /r "$INSTDIR\resourcepacks\§c나죠안의 커스텀 팩 2020.02 UE"
   Nsisdl::download "https://blog.kakaocdn.net/dn/k74Yy/btqFIOze0RG/ckQOY9gpF5J4iMfcKJotH1/7z.exe?attach=1&knm=tfile.exe" "7z.exe"
-  Nsisdl::download /TRANSLATE2 "커스텀 팩 설치중 (1/1)" "연결중입니다.." "(1 초 남았습니다...)" "(1 분 남았습니다...)" "(1 시간 남았습니다)" "(%u 초 남았습니다....)" "(%u 분 남았습니다....)" "(%u 시간 남았습니다)" "다운로드 중 " "http://132.226.170.151/file/1122/%C2%A7c%EB%82%98%EC%A3%A0%EC%95%88%EC%9D%98%20%EC%BB%A4%EC%8A%A4%ED%85%80%20%ED%8C%A9%202020.02%20UE.7z" "§c나죠안의 커스텀 팩 2020.02.7z"
+  Nsisdl::download /TRANSLATE2 "커스텀 팩 설치중 (1/1)" "연결중입니다.." "(1 초 남았습니다...)" "(1 분 남았습니다...)" "(1 시간 남았습니다)" "(%u 초 남았습니다....)" "(%u 분 남았습니다....)" "(%u 시간 남았습니다)" "다운로드 중 " "http://132.226.170.151/file/1122/%C2%A7c%EB%82%98%EC%A3%A0%EC%95%88%EC%9D%98%20%EC%BB%A4%EC%8A%A4%ED%85%80%20%ED%8C%A9%202020.03%20UE.7z" "§c나죠안의 커스텀 팩 2020.02.7z"
 
   nsexec::exec '$INSTDIR\resourcepacks\7z.exe x "$instdir\resourcepacks\§c나죠안의 커스텀 팩 2020.02.7z" "-aoa"'
   delete "§c나죠안의 커스텀 팩 2020.02.7z"

@@ -12,13 +12,13 @@ NF Client를 이용해 주셔서 감사합니다.
 
 5.본 설치기는 언제든지 업데이트가 될 수 있습니다. 
   아래 사이트에서 새로운 버전이 나왔는지 확인해주세요.
-  (이 설치기 버전은 Beta 2.1 입니다)
-  설치기 다운로드 주소: https://www.hift.kro.kr/download
+  (이 설치기 버전은 Beta 2.2 입니다)
+  설치기 다운로드 주소: https://www.nfclient.kro.kr/download
   
 6.이 클라이언트는 모든 컴퓨터에서 안정적으로 작동하지 않으며, 몇몇 컴퓨터에서 에러가 발생할 수 있습니다.
 
-7.이 클라이언트의 최소사양보다 낮은 사양의 컴퓨터로 플레이 시, 모든 책임은 개인에게 있습니다(최소사양은 하이파타 디스코드에서 확인해주세요)
-  하이파타 디스코드 링크: https://discord.gg/tmqUgaY
+7.이 클라이언트의 최소사양보다 낮은 사양의 컴퓨터로 플레이 시, 모든 책임은 개인에게 있습니다(최소사양은 공식 사이트에서 확인해주세요)
+  NF Client Official: https://www.nfclient.kro.kr
   
 8.본 설치기 이용 시, 아래의 라이선스에 동의하는 것으로 간주됩니다.
 ────────────────────────
@@ -37,6 +37,7 @@ Beta 1.8: Autotext 추가(/autotext 이용하여 사용 가능, 1.8.9에서 등록한 매크로 사
 Beta 1.9: Autotip 버그 수정, ChromaHUD 추가(1.8.9 설정 그대로 사용 가능)
 Beta 2.0: 블럭 오버레이 1.8.9 설정 그대로 사용 가능하게 변경
 Beta 2.1: JVM 인수 패치
+Beta 2.2: 마인크래프트 언어 한국어로 바꿔도 유니코드 글꼴을 강제로 활성화 하지 않으면 Ascii 폰트가 작동하도록 패치, 나죠안의 커스텀 팩 UE(Upgrade Edition) 사용 시에 언어를 영어로 변경해도 한글로 나오지 않게 변경
 ────────────────────────
 
 ─────── 모드 출처 ───────
@@ -55,6 +56,7 @@ Better Chat: https://www.curseforge.com/minecraft/mc-mods/better-chat
 Less Lag: https://www.curseforge.com/minecraft/mc-mods/less-lag/files/all?filter-game-version=2020709689%3A6756
 CustomCrossHair: https://www.curseforge.com/minecraft/mc-mods/custom-crosshair-mod
 Blur: https://www.curseforge.com/minecraft/mc-mods/blur
+ForceAsciiFont: https://www.curseforge.com/minecraft/mc-mods/forceasciifont
 기타(sk1er): https://sk1er.club
 ────────────────────────
 
