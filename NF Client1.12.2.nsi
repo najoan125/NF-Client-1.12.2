@@ -60,10 +60,10 @@ ShowInstDetails hide
 Section "MainSection" SEC01
   SetOverwrite on
   AddSize 1000000
-  Messagebox MB_OKCANCEL "경고: NF Client에 수동으로 설치한 모드는 삭제됩니다.$\n$\n설치를 취소하시려면 취소를 누르세요" IDCANCEL END
+  Messagebox MB_OKCANCEL "경고: NF Client 1.12.2 폴더에 수동으로 설치한 모드는 삭제됩니다.$\n$\n설치를 취소하시려면 취소를 누르세요" IDCANCEL END
   iffileexists "$APPDATA\.nfclient\mods\1.8.9\slf4j-api-1.7.25.jar" O X
 X:
-  Messagebox MB_OK "NF Client가 설치되지 않았거나, 2021.1 미만의 버전이 설치되어있습니다.$\nBeta 2021.1 이상의 버전으로 업데이트 후 설치해주세요." IDOK END
+  Messagebox MB_OK "NF Client가 설치되지 않았거나, 2021.1 미만의 버전이 설치되어있습니다.$\n2021.1 이상의 버전으로 업데이트 후 설치해주세요." IDOK END
 O:
   SetOutPath "$INSTDIR"
   File "launcher_profiles.json"
