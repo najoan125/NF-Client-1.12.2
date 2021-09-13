@@ -12,7 +12,7 @@ NF Client를 이용해 주셔서 감사합니다.
 
 5.본 설치기는 언제든지 업데이트가 될 수 있습니다. 
   아래 사이트에서 새로운 버전이 나왔는지 확인해주세요.
-  (이 설치기 버전은 Beta 4.0 입니다)
+  (이 설치기 버전은 Beta 4.1 입니다)
   설치기 다운로드 주소: https://www.nfclient.kro.kr/download
   
 6.이 클라이언트는 모든 컴퓨터에서 안정적으로 작동하지 않으며, 몇몇 컴퓨터에서 에러가 발생할 수 있습니다.
@@ -42,6 +42,7 @@ Beta 3.0: AutoGG 추가(/autogg gui로 이용 가능), 나죠안의 커스텀팩 UE 2021로 업데
 Beta 3.1: Quickplay 업데이트
 Beta 3.2: AutoSprint 모드 -> SimpleSprint 모드로 변경
 Beta 4.0: 1.8.9와 같이 모드 설정 GUI 추가, CustomCrossHair 업데이트 및 기능 개선(동적 십자선 설정 기능을 개선하여 공격 딜레이를 갭으로 표시), 메인메뉴 Realms 버튼 삭제, DiscordRPC 1.8.9와 같이 변경, Music Player 업데이트
+Beta 4.1: 튕김 이슈, 인벤토리 백그라운드 이슈 해결(Blur 모드 제거), 버그 수정(Out of Memory 이슈 수정)
 ────────────────────────
 
 ─────── 모드 출처 ───────
