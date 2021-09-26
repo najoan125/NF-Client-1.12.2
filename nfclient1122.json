@@ -1,0 +1,10 @@
+{
+  "homepage": "https://github.com/najoan125/NF-Client-1.12.2/releases/latest",
+  "1.12.2": {
+    "B5.0.0": "업데이트 확인 기능 추가",
+  },
+  "promos": {
+    "1.12.2-latest": "2021.85",
+    "1.12.2-recommended": "2021.85"
+  }
+}
