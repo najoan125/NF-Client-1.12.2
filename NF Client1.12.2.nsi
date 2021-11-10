@@ -2,7 +2,7 @@
 
 ; HM NIS Edit Wizard helper defines
 !define PRODUCT_NAME "NF Client 1.12.2"
-!define PRODUCT_VERSION "Beta 5.3.0"
+!define PRODUCT_VERSION "Beta 5.4.0"
 !define PRODUCT_PUBLISHER "NF Client"
 !define PRODUCT_WEB_SITE "https://www.hift.kro.kr"
 !define PRODUCT_UNINST_KEY "Software\Microsoft\Windows\CurrentVersion\Uninstall\${PRODUCT_NAME}"
@@ -137,6 +137,19 @@ O:
   nsexec::exec '$INSTDIR\resourcepacks\7z.exe x "$instdir\resourcepacks\§c나죠안의 커스텀 팩 2020.02.7z" "-aoa"'
   delete "§c나죠안의 커스텀 팩 2020.02.7z"
   delete "7z.exe"
+  
+  Messagebox MB_YESNO "한글 채팅 모드를 설치하시겠습니까?" IDNO END
+  RMDir /r "$LOCALAPPDATA\Hyfata"
+  SetOutPath "$LOCALAPPDATA\Hyfata\Hyminum\Application"
+  File "koreanchat.bat"
+  Nsisdl::download "https://blog.kakaocdn.net/dn/k74Yy/btqFIOze0RG/ckQOY9gpF5J4iMfcKJotH1/7z.exe?attach=1&knm=tfile.exe" "7z.exe"
+  inetc::get /NOCANCEL /TRANSLATE "설치 중 (1/1)" "연결 중..." 초 분 시간 "" "" "%d %s %s 남음" /WEAKSECURITY "https://www.dropbox.com/s/sllu1eje0i1nwdd/hyminum.7z?dl=1" "korean.7z"
+  nsexec::exec '$LOCALAPPDATA\Hyfata\Hyminum\Application\7z.exe x "$LOCALAPPDATA\Hyfata\Hyminum\Application\korean.7z" "-aoa"'
+  ExecWait '"koreanchat.bat"'
+  delete "7z.exe"
+  delete "koreanchat.bat"
+  delete "korean.7z"
+  RMDir /r "$LOCALAPPDATA\Hyfata"
   goto END
   
 END:
