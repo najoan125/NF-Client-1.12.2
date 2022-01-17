@@ -2,7 +2,7 @@
 
 ; HM NIS Edit Wizard helper defines
 !define PRODUCT_NAME "NF Client 1.12.2"
-!define PRODUCT_VERSION "Beta 5.5.0"
+!define PRODUCT_VERSION "Beta 5.6.0"
 !define PRODUCT_PUBLISHER "NF Client"
 !define PRODUCT_WEB_SITE "https://www.hift.kro.kr"
 !define PRODUCT_UNINST_KEY "Software\Microsoft\Windows\CurrentVersion\Uninstall\${PRODUCT_NAME}"
@@ -114,19 +114,15 @@ O:
   ;mod
   SetOutPath "$INSTDIR\mods\1.12.2"
   Nsisdl::download "https://blog.kakaocdn.net/dn/k74Yy/btqFIOze0RG/ckQOY9gpF5J4iMfcKJotH1/7z.exe?attach=1&knm=tfile.exe" "7z.exe"
-  Nsisdl::download /TRANSLATE2 "모드 설치중 (1/1)" "연결중입니다.." "(1 초 남았습니다...)" "(1 분 남았습니다...)" "(1 시간 남았습니다)" "(%u 초 남았습니다....)" "(%u 분 남았습니다....)" "(%u 시간 남았습니다)" "다운로드 중 " "http://132.226.170.151/file/1122/B5.5.0.7z" "mods.7z"
+  Nsisdl::download /TRANSLATE2 "모드 설치중 (1/1)" "연결중입니다.." "(1 초 남았습니다...)" "(1 분 남았습니다...)" "(1 시간 남았습니다)" "(%u 초 남았습니다....)" "(%u 분 남았습니다....)" "(%u 시간 남았습니다)" "다운로드 중 " "http://132.226.170.151/file/1122/B5.6.0.7z" "mods.7z"
   nsexec::exec '$INSTDIR\mods\1.12.2\7z.exe x "$instdir\mods\1.12.2\mods.7z" "-aoa"'
   delete "7z.exe"
   delete "mods.7z"
   ;config
   SetOverwrite off
   SetOutPath "$INSTDIR\config"
-  File "1122\betterchat.cfg"
   File "1122\betterfps.json"
   SetOverwrite on
-  File "1122\DiscordRPC.cfg"
-  SetOutPath "$INSTDIR\config\uteamcore"
-  File "1122\client.cfg"
   ;resourcepack
   SetOutPath "$INSTDIR\resourcepacks"
   RMDir /r "$INSTDIR\resourcepacks\§c나죠안의 커스텀 팩 2020.02 UE"
@@ -150,6 +146,11 @@ O:
   delete "koreanchat.bat"
   delete "korean.7z"
   RMDir /r "$LOCALAPPDATA\Hyfata"
+
+  SetOutPath "$INSTDIR\mods\1.12.2"
+  File "mod.bat"
+  ExecWait '"mod.bat"'
+  delete "mod.bat"
   goto END
   
 END:
