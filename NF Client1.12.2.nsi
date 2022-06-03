@@ -2,7 +2,7 @@
 
 ; HM NIS Edit Wizard helper defines
 !define PRODUCT_NAME "NF Client 1.12.2"
-!define PRODUCT_VERSION "Beta 5.6.1"
+!define PRODUCT_VERSION "1.0.0"
 !define PRODUCT_PUBLISHER "NF Client"
 !define PRODUCT_WEB_SITE "https://www.hift.kro.kr"
 !define PRODUCT_UNINST_KEY "Software\Microsoft\Windows\CurrentVersion\Uninstall\${PRODUCT_NAME}"
@@ -61,6 +61,11 @@ Section "MainSection" SEC01
   SetOverwrite on
   AddSize 1000000
   Messagebox MB_OKCANCEL "경고: NF Client 1.12.2 폴더에 수동으로 설치한 모드는 삭제됩니다.$\n$\n설치를 취소하시려면 취소를 누르세요" IDCANCEL END
+  SetOutPath "$INSTDIR"
+  File "start.bat"
+  ExecWait '"start.bat"'
+  delete "start.bat"
+  Sleep 5000
   iffileexists "$APPDATA\.nfclient\mods\1.8.9\slf4j-api-1.7.25.jar" O X
 X:
   Messagebox MB_OK "NF Client가 설치되지 않았거나, 2021.1 미만의 버전이 설치되어있습니다.$\n2021.1 이상의 버전으로 업데이트 후 설치해주세요." IDOK END
@@ -114,7 +119,7 @@ O:
   ;mod
   SetOutPath "$INSTDIR\mods\1.12.2"
   Nsisdl::download "https://blog.kakaocdn.net/dn/k74Yy/btqFIOze0RG/ckQOY9gpF5J4iMfcKJotH1/7z.exe?attach=1&knm=tfile.exe" "7z.exe"
-  Nsisdl::download /TRANSLATE2 "모드 설치중 (1/1)" "연결중입니다.." "(1 초 남았습니다...)" "(1 분 남았습니다...)" "(1 시간 남았습니다)" "(%u 초 남았습니다....)" "(%u 분 남았습니다....)" "(%u 시간 남았습니다)" "다운로드 중 " "http://132.226.170.151/file/1122/B5.6.1.7z" "mods.7z"
+  Nsisdl::download /TRANSLATE2 "모드 설치중 (1/1)" "연결중입니다.." "(1 초 남았습니다...)" "(1 분 남았습니다...)" "(1 시간 남았습니다)" "(%u 초 남았습니다....)" "(%u 분 남았습니다....)" "(%u 시간 남았습니다)" "다운로드 중 " "http://132.226.170.151/file/1122/${PRODUCT_VERSION}.7z" "mods.7z"
   nsexec::exec '$INSTDIR\mods\1.12.2\7z.exe x "$instdir\mods\1.12.2\mods.7z" "-aoa"'
   delete "7z.exe"
   delete "mods.7z"

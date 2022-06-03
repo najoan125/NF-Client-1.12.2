@@ -1,10 +1,10 @@
 {
   "homepage": "https://github.com/najoan125/NF-Client-1.12.2/releases/latest",
   "1.12.2": {
-    "B5.0.0": "¾÷µ¥ÀÌÆ® È®ÀÎ ±â´É Ãß°¡",
+    "1.0.0": " - ì—…ë°ì´íŠ¸ í™•ì¸ ê¸°ëŠ¥ ì¶”ê°€\n\u00a76 - ë©”ì¸ë©”ë‰´ UI ë³€ê²½\n\u00a76 - Replaymod ì—…ë°ì´íŠ¸"
   },
   "promos": {
-    "1.12.2-latest": "2021.85",
-    "1.12.2-recommended": "2021.85"
+    "1.12.2-latest": "1.0.0",
+    "1.12.2-recommended": "1.0.0"
   }
 }
