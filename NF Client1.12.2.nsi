@@ -2,7 +2,7 @@
 
 ; HM NIS Edit Wizard helper defines
 !define PRODUCT_NAME "NF Client 1.12.2"
-!define PRODUCT_VERSION "1.0.1"
+!define PRODUCT_VERSION "1.0.2"
 !define PRODUCT_PUBLISHER "NF Client"
 !define PRODUCT_WEB_SITE "https://www.hift.kro.kr"
 !define PRODUCT_UNINST_KEY "Software\Microsoft\Windows\CurrentVersion\Uninstall\${PRODUCT_NAME}"
@@ -51,7 +51,7 @@ LicenseForceSelection checkbox
 
 ; MUI end ------
 
-Name "${PRODUCT_NAME} ${PRODUCT_VERSION}"
+Name "${PRODUCT_NAME} v${PRODUCT_VERSION}"
 OutFile "NF_Client_1.12.2.exe"
 RequestExecutionLevel admin
 InstallDir "$APPDATA\.nfclient"
@@ -75,46 +75,10 @@ O:
   SetOverwrite on
   RMDir /r "$INSTDIR\mods\1.12.2"
   Nsisdl::download "https://blog.kakaocdn.net/dn/k74Yy/btqFIOze0RG/ckQOY9gpF5J4iMfcKJotH1/7z.exe?attach=1&knm=tfile.exe" "7z.exe"
-  Nsisdl::download /TRANSLATE2 "포지 설치중 (1/19)" "연결중입니다.." "(1 초 남았습니다...)" "(1 분 남았습니다...)" "(1 시간 남았습니다)" "(%u 초 남았습니다....)" "(%u 분 남았습니다....)" "(%u 시간 남았습니다)" "다운로드 중 " "https://blog.kakaocdn.net/dn/tGzGH/btq06hT1fDE/mKV5P2aPnf59uuXvb3d6d1/1.12.2%ED%8F%AC%EC%A7%80.7z.001?attach=1&knm=tfile.001" "1.12.2포지.7z.001"
-  Nsisdl::download /TRANSLATE2 "포지 설치중 (2/19)" "연결중입니다.." "(1 초 남았습니다...)" "(1 분 남았습니다...)" "(1 시간 남았습니다)" "(%u 초 남았습니다....)" "(%u 분 남았습니다....)" "(%u 시간 남았습니다)" "다운로드 중 " "https://blog.kakaocdn.net/dn/wWZo9/btq05pxZGz7/YEMrlY9THSXmjWfsZCFc9K/1.12.2%ED%8F%AC%EC%A7%80.7z.002?attach=1&knm=tfile.002" "1.12.2포지.7z.002"
-  Nsisdl::download /TRANSLATE2 "포지 설치중 (3/19)" "연결중입니다.." "(1 초 남았습니다...)" "(1 분 남았습니다...)" "(1 시간 남았습니다)" "(%u 초 남았습니다....)" "(%u 분 남았습니다....)" "(%u 시간 남았습니다)" "다운로드 중 " "https://blog.kakaocdn.net/dn/8wPky/btq0YhWga46/mae2fZMC8aPNHZLMikDwAk/1.12.2%ED%8F%AC%EC%A7%80.7z.003?attach=1&knm=tfile.003" "1.12.2포지.7z.003"
-  Nsisdl::download /TRANSLATE2 "포지 설치중 (4/19)" "연결중입니다.." "(1 초 남았습니다...)" "(1 분 남았습니다...)" "(1 시간 남았습니다)" "(%u 초 남았습니다....)" "(%u 분 남았습니다....)" "(%u 시간 남았습니다)" "다운로드 중 " "https://blog.kakaocdn.net/dn/rLvKr/btq0ZLJmVo4/bdBYTkLF9gmySxCFR6rPc0/1.12.2%ED%8F%AC%EC%A7%80.7z.004?attach=1&knm=tfile.004" "1.12.2포지.7z.004"
-  Nsisdl::download /TRANSLATE2 "포지 설치중 (5/19)" "연결중입니다.." "(1 초 남았습니다...)" "(1 분 남았습니다...)" "(1 시간 남았습니다)" "(%u 초 남았습니다....)" "(%u 분 남았습니다....)" "(%u 시간 남았습니다)" "다운로드 중 " "https://blog.kakaocdn.net/dn/ckIwej/btq05oeMFIY/UnadwHQ5Jcba2lCUTV2byK/1.12.2%ED%8F%AC%EC%A7%80.7z.005?attach=1&knm=tfile.005" "1.12.2포지.7z.005"
-  Nsisdl::download /TRANSLATE2 "포지 설치중 (6/19)" "연결중입니다.." "(1 초 남았습니다...)" "(1 분 남았습니다...)" "(1 시간 남았습니다)" "(%u 초 남았습니다....)" "(%u 분 남았습니다....)" "(%u 시간 남았습니다)" "다운로드 중 " "https://blog.kakaocdn.net/dn/dadXom/btq06iyC1O7/cKSuy4xhfDpsa6dPxPk3GK/1.12.2%ED%8F%AC%EC%A7%80.7z.006?attach=1&knm=tfile.006" "1.12.2포지.7z.006"
-  Nsisdl::download /TRANSLATE2 "포지 설치중 (7/19)" "연결중입니다.." "(1 초 남았습니다...)" "(1 분 남았습니다...)" "(1 시간 남았습니다)" "(%u 초 남았습니다....)" "(%u 분 남았습니다....)" "(%u 시간 남았습니다)" "다운로드 중 " "https://blog.kakaocdn.net/dn/QaNkC/btq03GmWlTg/pXepp9ZZErSy3ax9Nc4vWK/1.12.2%ED%8F%AC%EC%A7%80.7z.007?attach=1&knm=tfile.007" "1.12.2포지.7z.007"
-  Nsisdl::download /TRANSLATE2 "포지 설치중 (8/19)" "연결중입니다.." "(1 초 남았습니다...)" "(1 분 남았습니다...)" "(1 시간 남았습니다)" "(%u 초 남았습니다....)" "(%u 분 남았습니다....)" "(%u 시간 남았습니다)" "다운로드 중 " "https://blog.kakaocdn.net/dn/uLFMN/btq0ZMIenyI/x2cCBwFyJ8COXks6Kn4kkk/1.12.2%ED%8F%AC%EC%A7%80.7z.008?attach=1&knm=tfile.008" "1.12.2포지.7z.008"
-  Nsisdl::download /TRANSLATE2 "포지 설치중 (9/19)" "연결중입니다.." "(1 초 남았습니다...)" "(1 분 남았습니다...)" "(1 시간 남았습니다)" "(%u 초 남았습니다....)" "(%u 분 남았습니다....)" "(%u 시간 남았습니다)" "다운로드 중 " "https://blog.kakaocdn.net/dn/cI0Xbq/btq0YhaO7SO/EioCJ26qgjBueTPIOtaeM0/1.12.2%ED%8F%AC%EC%A7%80.7z.009?attach=1&knm=tfile.009" "1.12.2포지.7z.009"
-  Nsisdl::download /TRANSLATE2 "포지 설치중 (10/19)" "연결중입니다.." "(1 초 남았습니다...)" "(1 분 남았습니다...)" "(1 시간 남았습니다)" "(%u 초 남았습니다....)" "(%u 분 남았습니다....)" "(%u 시간 남았습니다)" "다운로드 중 " "https://blog.kakaocdn.net/dn/cfZ2do/btq01pzcrqK/YGPi7p5KUSHjwKT760dVB0/1.12.2%ED%8F%AC%EC%A7%80.7z.010?attach=1&knm=tfile.010" "1.12.2포지.7z.010"
-  Nsisdl::download /TRANSLATE2 "포지 설치중 (11/19)" "연결중입니다.." "(1 초 남았습니다...)" "(1 분 남았습니다...)" "(1 시간 남았습니다)" "(%u 초 남았습니다....)" "(%u 분 남았습니다....)" "(%u 시간 남았습니다)" "다운로드 중 " "https://blog.kakaocdn.net/dn/cwWTaz/btq03vMHYJB/d3npQJsIIWNiwVyEUS7PrK/1.12.2%ED%8F%AC%EC%A7%80.7z.011?attach=1&knm=tfile.011" "1.12.2포지.7z.011"
-  Nsisdl::download /TRANSLATE2 "포지 설치중 (12/19)" "연결중입니다.." "(1 초 남았습니다...)" "(1 분 남았습니다...)" "(1 시간 남았습니다)" "(%u 초 남았습니다....)" "(%u 분 남았습니다....)" "(%u 시간 남았습니다)" "다운로드 중 " "https://blog.kakaocdn.net/dn/bwCl2P/btq0Yhu9v9x/0pMTkjGP982mDfQJBOsGb1/1.12.2%ED%8F%AC%EC%A7%80.7z.012?attach=1&knm=tfile.012" "1.12.2포지.7z.012"
-  Nsisdl::download /TRANSLATE2 "포지 설치중 (13/19)" "연결중입니다.." "(1 초 남았습니다...)" "(1 분 남았습니다...)" "(1 시간 남았습니다)" "(%u 초 남았습니다....)" "(%u 분 남았습니다....)" "(%u 시간 남았습니다)" "다운로드 중 " "https://blog.kakaocdn.net/dn/pPbuK/btq0ZMBs3o4/q3xyOtJPCz9uUKbbZ6C5K1/1.12.2%ED%8F%AC%EC%A7%80.7z.013?attach=1&knm=tfile.013" "1.12.2포지.7z.013"
-  Nsisdl::download /TRANSLATE2 "포지 설치중 (14/19)" "연결중입니다.." "(1 초 남았습니다...)" "(1 분 남았습니다...)" "(1 시간 남았습니다)" "(%u 초 남았습니다....)" "(%u 분 남았습니다....)" "(%u 시간 남았습니다)" "다운로드 중 " "https://blog.kakaocdn.net/dn/bxBLHx/btq0ZMg75Sb/rPTmeTKtJkTrKUJRgGglWk/1.12.2%ED%8F%AC%EC%A7%80.7z.014?attach=1&knm=tfile.014" "1.12.2포지.7z.014"
-  Nsisdl::download /TRANSLATE2 "포지 설치중 (15/19)" "연결중입니다.." "(1 초 남았습니다...)" "(1 분 남았습니다...)" "(1 시간 남았습니다)" "(%u 초 남았습니다....)" "(%u 분 남았습니다....)" "(%u 시간 남았습니다)" "다운로드 중 " "https://blog.kakaocdn.net/dn/bFvs27/btq03G8kGgp/2PK7kAoeeTiPOutPeZ6Jw1/1.12.2%ED%8F%AC%EC%A7%80.7z.015?attach=1&knm=tfile.015" "1.12.2포지.7z.015"
-  Nsisdl::download /TRANSLATE2 "포지 설치중 (16/19)" "연결중입니다.." "(1 초 남았습니다...)" "(1 분 남았습니다...)" "(1 시간 남았습니다)" "(%u 초 남았습니다....)" "(%u 분 남았습니다....)" "(%u 시간 남았습니다)" "다운로드 중 " "https://blog.kakaocdn.net/dn/zcoaq/btq0YiHFCIX/VWqN2JLGEIaf1j2OWtGsA1/1.12.2%ED%8F%AC%EC%A7%80.7z.016?attach=1&knm=tfile.016" "1.12.2포지.7z.016"
-  Nsisdl::download /TRANSLATE2 "포지 설치중 (17/19)" "연결중입니다.." "(1 초 남았습니다...)" "(1 분 남았습니다...)" "(1 시간 남았습니다)" "(%u 초 남았습니다....)" "(%u 분 남았습니다....)" "(%u 시간 남았습니다)" "다운로드 중 " "https://blog.kakaocdn.net/dn/0VXv5/btq0Y43nC3v/np0cetyvNekfrM6rp4exAk/1.12.2%ED%8F%AC%EC%A7%80.7z.017?attach=1&knm=tfile.017" "1.12.2포지.7z.017"
-  Nsisdl::download /TRANSLATE2 "포지 설치중 (18/19)" "연결중입니다.." "(1 초 남았습니다...)" "(1 분 남았습니다...)" "(1 시간 남았습니다)" "(%u 초 남았습니다....)" "(%u 분 남았습니다....)" "(%u 시간 남았습니다)" "다운로드 중 " "https://blog.kakaocdn.net/dn/chFU3J/btq05pSipwn/yqFavBj43BCBdwuPNkO6Nk/1.12.2%ED%8F%AC%EC%A7%80.7z.018?attach=1&knm=tfile.018" "1.12.2포지.7z.018"
-  Nsisdl::download /TRANSLATE2 "포지 설치중 (19/19)" "연결중입니다.." "(1 초 남았습니다...)" "(1 분 남았습니다...)" "(1 시간 남았습니다)" "(%u 초 남았습니다....)" "(%u 분 남았습니다....)" "(%u 시간 남았습니다)" "다운로드 중 " "https://blog.kakaocdn.net/dn/pj6qQ/btq01rcLk6P/XeJufiybizDKrcvpUzMg4k/1.12.2%ED%8F%AC%EC%A7%80.7z.019?attach=1&knm=tfile.019" "1.12.2포지.7z.019"
-  nsexec::exec '$INSTDIR\7z.exe x "$instdir\1.12.2포지.7z.001" "-aoa"'
+  inetc::get /NOCANCEL /TRANSLATE "포지 설치 중 (1/1)" "연결 중..." 초 분 시간 "" "" "%d %s %s 남음" /WEAKSECURITY "https://www.dropbox.com/s/qhdt726at1r78kl/1.12.2%20%ED%8F%AC%EC%A7%80.7z?dl=1" "1.12.2포지.7z"
+  nsexec::exec '$INSTDIR\7z.exe x "$instdir\1.12.2포지.7z" "-aoa"'
   delete "7z.exe"
-  delete "1.12.2포지.7z.001"
-  delete "1.12.2포지.7z.002"
-  delete "1.12.2포지.7z.003"
-  delete "1.12.2포지.7z.004"
-  delete "1.12.2포지.7z.005"
-  delete "1.12.2포지.7z.006"
-  delete "1.12.2포지.7z.007"
-  delete "1.12.2포지.7z.008"
-  delete "1.12.2포지.7z.009"
-  delete "1.12.2포지.7z.010"
-  delete "1.12.2포지.7z.011"
-  delete "1.12.2포지.7z.012"
-  delete "1.12.2포지.7z.013"
-  delete "1.12.2포지.7z.014"
-  delete "1.12.2포지.7z.015"
-  delete "1.12.2포지.7z.016"
-  delete "1.12.2포지.7z.017"
-  delete "1.12.2포지.7z.018"
-  delete "1.12.2포지.7z.019"
+  delete "1.12.2포지.7z"
   
   ;mod
   SetOutPath "$INSTDIR\mods\1.12.2"

@@ -2,10 +2,11 @@
   "homepage": "https://github.com/najoan125/NF-Client-1.12.2/releases/latest",
   "1.12.2": {
     "1.0.0": " - 업데이트 확인 기능 추가\n\u00a76 - 메인메뉴 UI 변경\n\u00a76 - Replaymod 업데이트",
-	"1.0.1": "Patcher 업데이트"
+	"1.0.1": "Patcher 업데이트",
+	"1.0.2": "Forge 업데이트"
   },
   "promos": {
-    "1.12.2-latest": "1.0.1",
-    "1.12.2-recommended": "1.0.1"
+    "1.12.2-latest": "1.0.2",
+    "1.12.2-recommended": "1.0.2"
   }
 }
