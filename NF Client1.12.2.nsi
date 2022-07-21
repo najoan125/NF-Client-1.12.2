@@ -2,7 +2,7 @@
 
 ; HM NIS Edit Wizard helper defines
 !define PRODUCT_NAME "NF Client 1.12.2"
-!define PRODUCT_VERSION "1.0.2"
+!define PRODUCT_VERSION "1.0.3"
 !define PRODUCT_PUBLISHER "NF Client"
 !define PRODUCT_WEB_SITE "https://www.hift.kro.kr"
 !define PRODUCT_UNINST_KEY "Software\Microsoft\Windows\CurrentVersion\Uninstall\${PRODUCT_NAME}"
@@ -74,12 +74,15 @@ O:
   File "launcher_profiles.json"
   SetOverwrite on
   RMDir /r "$INSTDIR\mods\1.12.2"
+  iffileexists "$INSTDIR\libraries\net\minecraftforge\forge\1.12.2-14.23.5.2860\forge-1.12.2-14.23.5.2860.jar" skip forge
+forge:
   Nsisdl::download "https://blog.kakaocdn.net/dn/k74Yy/btqFIOze0RG/ckQOY9gpF5J4iMfcKJotH1/7z.exe?attach=1&knm=tfile.exe" "7z.exe"
   inetc::get /NOCANCEL /TRANSLATE "포지 설치 중 (1/1)" "연결 중..." 초 분 시간 "" "" "%d %s %s 남음" /WEAKSECURITY "https://www.dropbox.com/s/qhdt726at1r78kl/1.12.2%20%ED%8F%AC%EC%A7%80.7z?dl=1" "1.12.2포지.7z"
   nsexec::exec '$INSTDIR\7z.exe x "$instdir\1.12.2포지.7z" "-aoa"'
   delete "7z.exe"
   delete "1.12.2포지.7z"
-  
+  goto skip
+skip:
   ;mod
   SetOutPath "$INSTDIR\mods\1.12.2"
   Nsisdl::download "https://blog.kakaocdn.net/dn/k74Yy/btqFIOze0RG/ckQOY9gpF5J4iMfcKJotH1/7z.exe?attach=1&knm=tfile.exe" "7z.exe"
